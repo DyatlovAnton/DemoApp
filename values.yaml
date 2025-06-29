@@ -131,7 +131,7 @@ deployment:
     selector:
       matchLabels:
         app: demo
-    replicas: 1
+    replicas: 2
     template:
       metadata:
         labels:
