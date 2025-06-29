@@ -1,0 +1,13 @@
+apiVersion: {{ .Values.nodePortService.apiVersion }}
+kind: {{ .Values.nodePortService.kind }}
+metadata: 
+  name: {{ .Values.nodePortService.metadata.name }}
+spec: 
+  type: {{ .Values.nodePortService.spec.type }}
+  ports: 
+  - protocol: {{ .Values.nodePortService.spec.ports.protocol }}
+    port: {{ .Values.nodePortService.spec.ports.port }}
+    targetPort: {{ .Values.nodePortService.spec.ports.targetPort }}
+    nodePort: {{ .Values.nodePortService.spec.ports.nodePort }}
+  selector: 
+    app: {{ .Values.nodePortService.spec.selector.app }}
